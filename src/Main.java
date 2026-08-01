@@ -7,38 +7,88 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Seja bem-vindo a calculadora do DUDU!");
         System.out.println("Digite o primeiro numero: ");
-        double x = sc.nextDouble();
+        int x = sc.nextInt();
         System.out.println("Digite o segundo numero: ");
-        double y = sc.nextDouble();
+        int y = sc.nextInt();
 
-        System.out.println("Digite qual opcao deseja: ");
-        int opc  = sc.nextInt();
-
+        int sct = 0;
 
         while(true){
+            System.out.println("Digite qual opcao deseja: ");
+            System.out.println("Opcao 1: Adicao");
+            System.out.println("Opcao 2: Subtracao");
+            System.out.println("Opcao 3: Multiplicacao");
+            System.out.println("Opcao 4: Divisao");
+            int opc  = sc.nextInt();
             if (opc == 1){
                 System.out.println("Voce escolheu adicao");
-                double resultado = x + y;
-                System.out.println(resultado);
-                System.out.println("Deseja continuar? (S/N)");
-                if(sc.next().charAt(0) == 'S'){
+                int resultado = x + y;
+                System.out.printf("O resultado da operacao foi: %d\n", resultado);
+                System.out.println("Deseja continuar?");
+                System.out.println("1- Sim 2- Nao");
+                sct = sc.nextInt();
+                if (sct == 1){
+                    System.out.println("Digite o primeiro numero: ");
+                    x = sc.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    y = sc.nextInt();
+                }
+                else if (sct == 2){
+                    break;
                 }
             }
             else if (opc == 2){
                 System.out.println("Voce escolheu subtracao");
-                double resultado = x - y;
-                System.out.println(resultado);
+                int resultado = x - y;
+                System.out.printf("O resultado da operacao foi: %d\n", resultado);
+                System.out.println("Deseja continuar?");
+                System.out.println("1- Sim 2- Nao");
+                sct = sc.nextInt();
+                if (sct == 1){
+                    System.out.println("Digite o primeiro numero: ");
+                    x = sc.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    y = sc.nextInt();
+                }
+                else if (sct == 2){
+                    break;
+                }
             }
             else if (opc == 3){
                 System.out.println("Voce escolheu multiplicacao");
-                double resultado = x * y;
-                System.out.println(resultado);
+                int resultado = x * y;
+                System.out.printf("O resultado da operacao foi: %d\n", resultado);
+                System.out.println("Deseja continuar?");
+                System.out.println("1- Sim 2- Nao");
+                sct = sc.nextInt();
+                if (sct == 1){
+                    System.out.println("Digite o primeiro numero: ");
+                    x = sc.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    y = sc.nextInt();
+                }
+                else if (sct == 2){
+                    break;
+                }
             }
             else if (opc == 4){
                 System.out.println("Voce escolheu divisao");
-                double resultado = x / y;
-                System.out.println(resultado);
+                int resultado = x / y;
+                System.out.printf("O resultado da operacao foi: %d\n", resultado);
+                System.out.println("Deseja continuar?");
+                System.out.println("1- Sim 2- Nao");
+                sct = sc.nextInt();
+                if (sct == 1){
+                    System.out.println("Digite o primeiro numero: ");
+                    x = sc.nextInt();
+                    System.out.println("Digite o segundo numero: ");
+                    y = sc.nextInt();
+                }
+                else if (sct == 2){
+                    break;
+                }
             }
         }
     }
